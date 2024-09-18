@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            user-select: none; /* 禁用选择 */
+            -moz-user-select: none; /* Firefox */
+            -webkit-user-select: none; /* Safari 和 Chrome */
+            -ms-user-select: none; /* IE 10+ */
+        }
+        .no-click {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dream Companion</h1>
+        <input type="text" id="search-bar" placeholder="搜索产品...">
+        <button id="sort-asc">正排序</button>
+        <button id="sort-desc">倒排序</button>
+    </header>
+    <main>
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>产品名称</th>
+                    <th>产品简介</th>
+                    <th>用户故事</th>
+                    <th>功能描述</th>
+                    <th>车载相关性</th>
+                    <th>评估过程</th>
+                    <th>车载应用场景</th>
+                </tr>
+            </thead>
+            <tbody id="product-list"></tbody>
+        </table>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-product-name"></h2>
+            <p id="modal-product-intro"></p>
+            <div id="modal-product-features"></div>
+            <p id="modal-product-story"></p>
+            <h2>车载相关性：</h2>
+            <p id="modal-product-relation"></p>
+            <h2>评估过程：</h2>
+            <p id="modal-product-relation-review"></p>
+            <div id="modal-product-relation-scenario"><h2 >车载应用场景</h2></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
